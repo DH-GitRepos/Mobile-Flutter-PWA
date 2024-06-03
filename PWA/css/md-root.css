@@ -1,0 +1,337 @@
+/* md-root.css */
+/* Written by Darren Halpin */
+/* 
+Adapted from Material Design 3 guidelines:
+https://m3.material.io/styles
+-- This style sheet defines the core styles
+*/
+
+/* MAIN ROOT STYLES */
+/* Colour Pallet */
+@media (prefers-color-scheme: dark) {
+/* Dark mode colour scheme */
+:root { 
+    --md-col-primary: #D0BCFF; /* primary80 */
+    --md-col-primary-container: #4F378B; /* primary30 */
+    --md-col-on-primary: #371E73; /* primary20 */
+    --md-col-on-primary-container: #EADDFF; /* primary90 */
+    --md-col-inverse-primary: #6750A4; /* primary40 */
+
+    --md-col-secondary: #CCC2DC; /* secondary80 */
+    --md-col-secondary-container: #4A4458; /* secondary30 */
+    --md-col-on-secondary: #332D41; /* secondary20 */
+    --md-col-on-secondary-container: #E8DEF8; /* secondary90 */
+
+    --md-col-tertiary: #EFB8C8; /* tertiary80 */
+    --md-col-tertiary-container: #633B48; /* tertiary30 */
+    --md-col-on-tertiary: #492532; /* tertiary20 */
+    --md-col-on-tertiary-container: #FFD8E4; /* tertiary90 */
+
+    --md-col-surface: #1C1B1F; /* neutral10 */
+    --md-col-surface-tint: #D0BCFF; /* primary */
+    --md-col-surface-variant: #49454F; /* neutral-variant30 */
+    --md-col-on-surface: #E6E1E5; /* neutral90 */
+    --md-col-on-surface-variant: #CAC4D0; /* neutral-variant80 */   
+    --md-col-inverse-surface: #E6E1E5; /* neutral90 */   
+    --md-col-inverse-on-surface: #313033; /* neutral20 */
+
+    --md-col-background: #1C1B1F; /* neutral10 */
+    --md-col-on-background: #E6E1E5; /* neutral90 */
+
+    --md-col-error: #F2B8B5; /* error80 */
+    --md-col-error-container: #8C1D18; /* error30 */
+    --md-col-on-error: #601410; /* error20 */
+    --md-col-on-error-container: #F9DEDC; /* error90 */
+
+    --md-col-outline: #938F99; /* neutral-variant60 */
+    --md-col-outline-variant: #444746; /* neutral-variant30 */
+    --md-col-shadow: #000000; /* neutral0 */
+    --md-col-scrim: #000000; /* neutral0 */
+
+    --md-logo: url('../images/logo/Baristars-Logo-1ldpi.png');
+    --md-bg-opac: 0.8;
+    }
+}
+        
+@media (prefers-color-scheme: light) {
+/* Light mode colour scheme */
+:root {
+    --md-col-primary: #6750A4; /* primary40 */
+    --md-col-primary-container: #EADDFF; /* primary90 */
+    --md-col-on-primary: #FFFFFF; /* primary100 */
+    --md-col-on-primary-container: #21005E; /* primary10 */
+    --md-col-inverse-primary: #D0BCFF; /* primary80 */
+
+    --md-col-secondary: #625B71; /* secondary40 */
+    --md-col-secondary-container: #E8DEF8; /* secondary90 */
+    --md-col-on-secondary: #FFFFFF; /* secondary100 */
+    --md-col-on-secondary-container: #1E192B; /* secondary10 */
+
+    --md-col-tertiary: #7D5260; /* tertiary40 */
+    --md-col-tertiary-container: #FFD8E4; /* tertiary90 */
+    --md-col-on-tertiary: #FFFFFF; /* tertiary100 */
+    --md-col-on-tertiary-container: #370B1E; /* tertiary10 */
+
+    --md-col-surface: #FFFBFE; /* neutral99 */
+    --md-col-surface-variant: #E7E0EC; /* neutral-variant90 */
+    --md-col-on-surface: #1C1B1F; /* neutral0 */
+    --md-col-on-surface-variant: #49454E; /* neutral-variant30 */
+    --md-col-surface-tint: #6750A4; /* primary */
+    --md-col-inverse-surface: #313033; /* neutral20 */
+    --md-col-inverse-on-surface: #F4EFF4; /* neutral95 */
+
+    --md-col-background: #FFFBFE; /* neutral99 */
+    --md-col-on-background: #1C1B1F; /* neutral10 */
+    
+    --md-col-error: #B3261E; /* error40 */
+    --md-col-error-container: #F9DEDC; /* error90 */
+    --md-col-on-error: #FFFFFF; /* error100 */
+    --md-col-on-error-container: #410E0B; /* error10 */
+
+    --md-col-outline: #79747E; /* neutral-variant50 */
+    --md-col-outline-variant: #C4C7C5; /* neutral-variant80 */
+    --md-col-shadow: #000000; /* neutral0 */
+    --md-col-scrim: #000000; /* neutral0 */
+
+    --md-logo: url('../images/logo/Baristars-Logo-White-1ldpi.png');
+    --md-bg-opac: 0.6;
+    }
+}
+
+/* Shapes */
+/*
+A dp is equal to one physical pixel on a screen with a density of 160. 
+
+To calculate dp:
+dp = (width in pixels * 160) / screen density
+
+When writing CSS, use px wherever dp or sp is stated. 
+Dp only needs to be used in developing for Android.
+*/
+    :root {
+        --md-shape-none: 0px;
+        --md-shape-extra-small: 4px;
+        --md-shape-extra-small-top: 4px 4px 0px 0px;
+        --md-shape-small: 8px;
+        --md-shape-medium: 12px;
+        --md-shape-medium-top: 12px 12px 0px 0px;
+        --md-shape-large: 16px;
+        --md-shape-large-end: 0px 16px 16px 0px;
+        --md-shape-large-top: 16px 16px 0px 0px;
+        --md-shape-extra-large: 28px;
+        --md-shape-extra-large-top: 28px 28px 0px 0px;
+        --md-shape-full: 28px 28px 28px 28px;
+    }
+
+/* Elevetion */
+    :root {
+        --md-elev-level0: 0;
+        --md-elev-level1: 1;
+        --md-elev-level2: 2;
+        --md-elev-level3: 3;
+        --md-elev-level4: 4;
+        --md-elev-level5: 5;
+        --md-elev-level6: 6;
+    }
+
+/* Shadows */
+    :root {
+        --md-shadow: 0px 2px 11px -5px var(--md-col-shadow);
+    }
+
+/* Opaticy */
+    :root {
+        --md-opac-disabled: 0.38; /* 0.62 */
+        --md-opac-enabled: 1;
+        --md-opac-hover-state: 0.50; /* 0.92 */
+        --md-opac-focus-state: 0.12; /* 0.88 */
+        --md-opac-pressed-state: 0.12; /* 0.88 */
+        --md-opac-dragged-state: 0.16; /* 0.84 */
+    }
+
+/* Typography */
+    @font-face {
+        font-family: 'roboto_regular';
+        font-style: normal;
+        font-weight: 400;
+        src: url('../fonts/Roboto-Regular.woff') format('woff');
+    }
+
+    @font-face {
+        font-family: 'roboto_medium';
+        font-style: normal;
+        font-weight: 500;
+        src: url('../fonts/Roboto-Medium.woff') format('woff');
+    }
+
+    :root {
+        --font-regular: 'roboto_regular', Arial, Verdana, Tahoma, sans-serif;
+        --font-medium: 'roboto_medium', Arial, Verdana, Tahoma, sans-serif;
+
+        /* shorthand format 
+        font: font-style font-variant font-weight font-size/line-height font-family 
+        /* 64sp x 0.0625 = rem */
+
+        --md-font-display-xlarge: normal normal 500 7rem/6.5rem var(--font-regular);
+        --md-font-display-large: normal normal 400 3.563rem/4rem var(--font-regular);
+        --md-font-display-medium: normal normal 400 2.813rem/3.25rem var(--font-regular);
+        --md-font-display-small: normal normal 400 2.25rem/2.75rem var(--font-regular);
+        --md-font-headline-large: normal normal 400 2rem/2.5rem var(--font-regular);
+        --md-font-headline-medium: normal normal 400 1.75rem/2.25rem var(--font-regular);
+        --md-font-headline-small: normal normal 400 1.5rem/2rem var(--font-regular);    
+        --md-font-title-large: normal normal 400 1.375rem/1.75rem var(--font-regular);
+        --md-font-title-medium: normal normal 500 1rem/1.5rem var(--font-medium);
+        --md-font-title-small: normal normal 500 0.875rem/1.25rem var(--font-medium);
+        --md-font-label-large: normal normal 500 0.875rem/1.25rem var(--font-medium);
+        --md-font-label-medium: normal normal 500 0.75rem/1rem var(--font-medium);
+        --md-font-label-small: normal normal 500 0.688rem/1rem var(--font-medium);
+        --md-font-body-large: normal normal 500 0.938rem/1.5rem var(--font-medium);
+        --md-font-body-medium: normal normal 400 0.875rem/1.25rem var(--font-regular);
+        --md-font-body-small: normal normal 400 0.75rem/1rem var(--font-regular);
+    }
+
+    /* Type classes */
+    /*
+    Including styles (as above), plus line height and tracking
+    */
+        /*
+        DISPLAY
+        There are three display styles in the default type scale: Large, medium, and small. 
+        As the largest text on the screen, display styles are reserved for short, important 
+        text or numerals. They work best on large screens.
+
+        For display type, consider choosing a more expressive font, such as a handwritten 
+        or script style. 
+
+        If available, set the appropriate optical size to your usage.
+        */
+
+            .md-font-display-large {
+                font: var(--md-font-display-large);
+                line-height: 4rem;
+                letter-spacing: 0rem;  
+            }
+
+            .md-font-display-medium {
+                font: var(--md-font-display-medium);
+                line-height: 3.25rem;
+                letter-spacing: 0rem; 
+            }
+
+            .md-font-display-small {
+                font: var(--md-font-display-small);
+                line-height: 2.75rem;
+                letter-spacing: 0rem;  
+            }
+
+        /*
+        HEADLINE
+        Headlines are best-suited for short, high-emphasis text on smaller screens. 
+        These styles can be good for marking primary passages of text or important 
+        regions of content.
+
+        Headlines can also make use of expressive typefaces, provided that appropriate 
+        line height and letter spacing is also integrated to maintain readability.
+        */
+
+            .md-font-headline-large {
+                font: var(--md-font-headline-large);
+                line-height: 2.5rem;
+                letter-spacing: 0rem;  
+            }
+
+            .md-font-headline-medium {
+                font: var(--md-font-headline-medium);
+                line-height: 2.25rem;
+                letter-spacing: 0rem;  
+            }
+
+            .md-font-headline-small {
+                font: var(--md-font-headline-small);
+                line-height: 2rem; 
+                letter-spacing: 0rem;  
+            }
+
+
+        /*
+        TITLE
+        Titles are smaller than headline styles, and should be used for medium-emphasis 
+        text that remains relatively short. For example, consider using title styles to 
+        divide secondary passages of text or secondary regions of content.
+
+        For titles, use caution when using expressive fonts, including display, 
+        handwritten, and script styles.
+        */
+
+            .md-font-title-large {
+                font: var(--md-font-title-large);
+                line-height: 1.75rem;
+                letter-spacing: 0rem;  
+            }
+
+            .md-font-title-medium {
+                font: var(--md-font-title-medium);
+                line-height: 1.5rem;
+                letter-spacing: 0.015rem;  
+            }
+
+            .md-font-title-small {
+                font: var(--md-font-title-small);
+                line-height: 1.25rem;
+                letter-spacing: 0.01rem;  
+            }
+
+        /*
+        LABEL 
+        styles are smaller, utilitarian styles, used for things like the text inside 
+        components or for very small text in the content body, such as captions. 
+
+        Buttons, for example, use the label large style.
+        */
+
+            .md-font-label-large {
+                font: var(--md-font-label-large);
+                line-height: 1.25rem;
+                letter-spacing: 0.1rem;  
+            }
+
+            .md-font-label-medium {
+                font: var(--md-font-label-medium);
+                line-height: 1rem;
+                letter-spacing: 0.5rem;  
+            }
+
+            .md-font-label-small {
+                font: var(--md-font-label-small);
+                line-height: 1rem;
+                letter-spacing: 0.5rem;  
+            }
+
+        /*
+        BODY
+        Body styles are used for longer passages of text in your app. 
+
+        Use typefaces intended for body styles, which are readable at smaller sizes and 
+        can be comfortably read in longer passages.
+
+        Avoid expressive or decorative fonts for body text because these can be harder 
+        to read at small sizes.
+        */
+
+            .md-font-body-large {
+                font: var(--md-font-body-large);
+                line-height: 1.5rem;
+                letter-spacing: 0.05rem;  
+            }
+
+            .md-font-body-medium {
+                font: var(--md-font-body-medium);
+                line-height: 1.25rem;
+                letter-spacing: 0.025rem;  
+            }
+
+            .md-font-body-small {
+                font: var(--md-font-body-small);
+                line-height: 1rem;
+                letter-spacing: 0.04rem;  
+            }

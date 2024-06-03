@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Baristars - App settings">
+    <!-- START ICONS/THEME -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="images/icons/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="images/icons/safari-pinned-tab.svg" color="#492532">
+    <meta name="msapplication-TileColor" content="#492532">
+    <meta name="msapplication-TileImage" content="images/icons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffd8e4">
+    <!-- END ICONS/THEME -->
+    <link rel="manifest" href="manifest.json"> 
+    <link rel="stylesheet" href="css/md-root.css">
+    <link rel="stylesheet" href="css/md-components-small.css">
+    <link rel="stylesheet" href="css/md-components-large.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Baristars - Apps</title>
+</head>
+
+<body>
+
+    <header>
+        
+        <!-- TOP APP BAR -->
+        <div id="md-top-app-bar-centered">
+            <div class="logo" alt="Baristars Logo"></div>
+        </div>
+        <!-- END TOP APP BAR -->
+        
+        <!-- BOTTOM APP BAR -->
+        <nav>
+            <ul id="md-cp-bottom-app-bar">
+                <li>
+                    <a href="home.html" class="nav-text">
+                        <span class="material-symbols-outlined">&#xe88a;</span>
+                        <span class="nav-icon-text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="order.html" class="nav-text">
+                        <span class="material-symbols-outlined">&#xefef;</span>
+                        <span class="nav-icon-text">Order</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="location.html" class="nav-text">
+                        <span class="material-symbols-outlined">&#xf14d;</span>
+                        <span class="nav-icon-text">Location</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="rewards.html" class="nav-text">
+                        <span class="material-symbols-outlined">&#xe8b1;</span>
+                        <span class="nav-icon-text">Rewards</span>
+                    </a>
+                </li>
+                <li>
+                    <a aria-current="page" href="settings.html" class="nav-text">
+                        <span class="material-symbols-outlined">&#xe8b8;</span>
+                        <span class="nav-icon-text">Settings</span>
+                    </a>
+                </li>                
+            </ul>
+        </nav>
+        <!-- END BOTTOM APP BAR -->
+        
+    </header>
+
+    <main id="content-container">
+
+        <article class="body-text-container" id="settings-title">
+            <h1 class="md-font-title-large">Hi Customer</h1>
+            <p class="md-font-title-medium">What can we do to help?</p>
+        </article>
+
+        <article class="md-list settings-list" id="settings-list">
+            
+            <dl>
+                <dt>your profile</dt>
+                <a href="#" target="_self"><dd>Change your email</dd></a>
+                <a href="#" target="_self"><dd>Change your password</dd></a>
+                <a href="#" target="_self"><dd>Manage payment information</dd></a>
+                <a href="#" target="_self"><dd>Order history</dd></a>
+            </dl>
+            
+            <dl>
+                <dt>support and legal</dt>
+                <a href="#" target="_self"><dd>Contact us</dd></a>
+                <a href="#" target="_self"><dd>Terms and conditions</dd></a>
+                <a href="#" target="_self"><dd>Privacy policy</dd></a>
+                <a href="#" target="_self"><dd>Delete account</dd></a>
+            </dl>
+
+            <dl>
+                <dt>contact preferences</dt>
+                <a href="#" target="_self"><dd>Allow us to contact you</dd></a>
+            </dl>
+            
+            <dl>
+                <dt>version</dt>
+                <dd>1.0</dd>
+            </dl>
+
+            <dl class="logout-list-item" id="logout-box">
+                <a href="index.html" target="_self">
+                    <dd>
+                        <span class=>Log out</span>
+                        <span class="material-symbols-outlined">&#xe9ba;</span>
+                    </dd>
+                </a>
+            </dl>
+
+        </article>
+        
+    </main>
+
+    <footer>
+        
+    </footer>
+
+    <script>
+        //check whether browser support service workers
+        if ('serviceWorker' in navigator) {
+            //wait until page loaded to avoid delaying rendering
+            window.addEventListener('load', function() {
+                //register service worker
+                navigator.serviceWorker.register('serviceworker.js').then(
+                    function(registration) {
+           console.log('Service worker registration successful',registration);
+                    }, 
+                    function(err) {
+                   console.log('Service worker registration failed', err);
+                });
+            });
+        }
+    </script>
+
+</body>
+
+</html>

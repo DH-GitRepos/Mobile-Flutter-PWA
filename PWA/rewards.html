@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Baristars - Rewards">
+    <!-- START ICONS/THEME -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="images/icons/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="images/icons/safari-pinned-tab.svg" color="#492532">
+    <meta name="msapplication-TileColor" content="#492532">
+    <meta name="msapplication-TileImage" content="images/icons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffd8e4">
+    <!-- END ICONS/THEME -->
+    <link rel="manifest" href="manifest.json"> 
+    <link rel="stylesheet" href="css/md-root.css">
+    <link rel="stylesheet" href="css/md-components-small.css">
+    <link rel="stylesheet" href="css/md-components-large.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Baristars - Rewards</title>
+</head>
+
+<body>
+
+    <header>
+        
+        <!-- TOP APP BAR -->
+        <section id="md-top-app-bar-centered">
+            <div class="logo" alt="Baristars Logo"></div>
+        </section>
+        <!-- END TOP APP BAR -->
+        
+        <!-- BOTTOM APP BAR -->
+        <nav>
+            <ul id="md-cp-bottom-app-bar">
+                <li>
+                    <a href="home.html" class="nav-text">
+                        <span class="material-symbols-outlined">&#xe88a;</span>
+                        <span class="nav-icon-text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="order.html" class="nav-text">
+                        <span class="material-symbols-outlined">&#xefef;</span>
+                        <span class="nav-icon-text">Order</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="location.html" class="nav-text">
+                        <span class="material-symbols-outlined">&#xf14d;</span>
+                        <span class="nav-icon-text">Location</span>
+                    </a>
+                </li>
+                <li>
+                    <a aria-current="page" href="rewards.html" class="nav-text">
+                        <span class="material-symbols-outlined">&#xe8b1;</span>
+                        <span class="nav-icon-text">Rewards</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html" class="nav-text">
+                        <span class="material-symbols-outlined">&#xe8b8;</span>
+                        <span class="nav-icon-text">Settings</span>
+                    </a>
+                </li>                
+            </ul>
+        </nav>
+        <!-- END BOTTOM APP BAR -->
+        
+    </header>
+
+    <main id="content-container-rewards">
+
+        <article class="body-text-container" id="rewards-title">
+            <h1 class="md-font-title-large">Hi Customer</h1>
+            <p class="md-font-title-medium">You have rewards to use!</p>
+        </article>
+        
+        <!-- CARD (WITH IMAGE) -->
+            <article class="md-card-elevated">
+                <picture class="card-img-container">
+                    <source media="(max-width: 75em)" srcset="images/stock/beans--pexels-photo-1695052.webp" type="image/webp">
+                    <img class="card-img-fave" src="images/stock/beans--pexels-photo-1695052.jpg" alt="Order your favourite">
+                    <!-- stock image from https://www.pexels.com/search/coffee/ -->
+                </picture>
+
+                <aside class="card-text-container" id="free-drinks-box">
+                    <h2 class="md-font-headline-small">You have 4 free drinks!</h2>
+                    <form name="reward_order" action="order.html" method="post">
+
+                        <p>
+                            <a href="order.html" target="_self"> 
+                                <input class="md-cp-button-common-filled" id="order-free" type="button" value="Order now" aria-label="Order free drink now">
+                            </a>
+                        </p>
+
+                        <p>
+                            <input type="hidden" name="promo" id="promo" value="xyz123-free">
+                        </p>
+
+                    </form>
+
+                </aside>
+
+            </article>
+        <!-- END CARD -->
+
+        <!-- CARD (WITH IMAGE) -->
+            <article class="md-card-elevated">
+                <picture class="card-img-container">
+                    <source media="(max-width: 75em)" srcset="images/stock/friends-pexels-marcus-aurelius-9789436.webp" type="image/webp">
+                    <img class="card-img-friends" src="images/stock/friends-pexels-marcus-aurelius-9789436.jpg" alt="Order your favourite">
+                    <!-- stock image from https://www.pexels.com/search/coffee/ -->
+                </picture>
+
+                <aside class="card-text-container" id="refer-form-box">
+                    <h2 class="md-font-headline-small">Refer another friend!</h2>
+                    <p class="md-font-body-medium">Enter their details below and we'll send them an invite, and a free drink on us as a welcome gift.</p>
+                    <p class="md-font-body-medium">Once they sign up and place their first order using the app, you'll get a free drink added to your account too!</p>
+
+                    <form name="refer_friend" action="#" method="post">
+
+                        <fieldset class="text-input-field">
+                            <legend>Name</legend>
+                            <input class="md-text-outlined" type="text" id="refer-name" name="refer-name" maxlength="75" value="Your friends name" aria-label="Your friends name">
+                        </fieldset>
+
+                        <fieldset class="text-input-field">
+                            <legend>Email</legend>
+                            <input class="md-text-outlined" type="email" id="refer-email" name="refer-email" maxlength="100" value="friend@email-address.com" aria-label="Your frinds email address">
+                        </fieldset>
+
+                        <p>
+                            <a href="#" target="_self">  
+                                <input class="md-cp-button-common-filled" name="refer-submit" id="refer-submit" type="button" value="Invite now" aria-label="Submit your friends details">
+                            </a>
+                        </p>
+
+                    </form>
+
+                </aside>
+
+            </article>
+        <!-- END CARD -->
+        
+    </main>
+
+    <footer>
+        
+    </footer>
+
+    <script>
+        //check whether browser support service workers
+        if ('serviceWorker' in navigator) {
+            //wait until page loaded to avoid delaying rendering
+            window.addEventListener('load', function() {
+                //register service worker
+                navigator.serviceWorker.register('serviceworker.js').then(
+                    function(registration) {
+           console.log('Service worker registration successful',registration);
+                    }, 
+                    function(err) {
+                   console.log('Service worker registration failed', err);
+                });
+            });
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Baristars - Login">
+    <!-- START ICONS/THEME -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="images/icons/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="images/icons/safari-pinned-tab.svg" color="#492532">
+    <meta name="msapplication-TileColor" content="#492532">
+    <meta name="msapplication-TileImage" content="images/icons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffd8e4">
+    <!-- END ICONS/THEME -->
+    <link rel="manifest" href="manifest.json"> 
+    <link rel="stylesheet" href="css/md-root.css">
+    <link rel="stylesheet" href="css/md-components-small.css">
+    <link rel="stylesheet" href="css/md-components-large.css">
+    <title>Baristars - Login</title>
+</head>
+
+<body>
+
+    <header>
+
+        <!-- TOP APP BAR -->
+        <div id="md-top-app-bar-centered">
+            <div class="logo" alt="Baristars Logo"></div>
+        </div>
+        <!-- END TOP APP BAR -->        
+
+    </header>
+
+    <main id="content-container-login">
+        
+        <!-- CARD (NO IMAGE) -->
+        <article class="md-card-elevated login-card" id="login-card">
+        
+            <aside class="card-text-container">
+        
+                <form name="login-form" id="login-form" action="#" method="post">
+        
+                    <article class="body-text-container login-card">
+                        <h1 class="md-font-title-large">Welcome to Baristars</h1>
+                        <p class="md-font-title-medium">Please log in to continue.</p>
+                    </article>
+
+                    <fieldset class="text-input-field">
+                        <legend>Username</legend>
+                        <input class="md-text-outlined" type="text" id="login-un" name="login-un" maxlength="75" aria-label="Username">
+                    </fieldset>
+
+                    <fieldset class="text-input-field">
+                        <legend>Password</legend>
+                        <input class="md-text-outlined" type="password" id="login-pw" name="login-pw" maxlength="75" aria-label="Password">
+                    </fieldset>
+
+                    <article class="body-text-container-note">
+                        <p class="md-font-body-small">
+                            <a href="#" target="_self">Forgot login details</a>
+                            <a href="register.html" target="_self">Register</a> 
+                        </p>
+                    </article>
+                    
+                    <p>
+                        <a href="home.html" target="_self">
+                            <input class="md-cp-button-common-filled" id="login-button" type="button" value="Login" aria-label="Login">
+                        </a>
+                    </p>
+        
+                </form>
+        
+            </aside>
+        
+        </article>
+        <!-- END CARD -->
+
+    </main>
+
+    <footer>
+        
+    </footer>
+
+    <script>
+        //check whether browser support service workers
+        if ('serviceWorker' in navigator) {
+            //wait until page loaded to avoid delaying rendering
+            window.addEventListener('load', function() {
+                //register service worker
+                navigator.serviceWorker.register('serviceworker.js').then(
+                    function(registration) {
+           console.log('Service worker registration successful',registration);
+                    }, 
+                    function(err) {
+                   console.log('Service worker registration failed', err);
+                });
+            });
+        }
+    </script>
+
+</body>
+
+</html>

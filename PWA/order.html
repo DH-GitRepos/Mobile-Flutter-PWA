@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Baristars - Order">
+    <!-- START ICONS/THEME -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="194x194" href="images/icons/favicon-194x194.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/icons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16x16.png">
+    <link rel="mask-icon" href="images/icons/safari-pinned-tab.svg" color="#492532">
+    <meta name="msapplication-TileColor" content="#492532">
+    <meta name="msapplication-TileImage" content="images/icons/mstile-144x144.png">
+    <meta name="theme-color" content="#ffd8e4">
+    <!-- END ICONS/THEME -->
+    <link rel="manifest" href="manifest.json"> 
+    <link rel="stylesheet" href="css/md-root.css">
+    <link rel="stylesheet" href="css/md-components-small.css">
+    <link rel="stylesheet" href="css/md-components-large.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Baristars - Order</title>
+</head>
+
+<body>
+
+    <header>
+    
+        <!-- TOP APP BAR -->
+        <div id="md-top-app-bar-centered">
+            <div class="logo" alt="Baristars Logo"></div>
+        </div>
+        <!-- END TOP APP BAR -->
+        
+        <!-- BOTTOM APP BAR -->
+        <nav>
+            <ul id="md-cp-bottom-app-bar">
+                <li>
+                    <a href="home.html" class="nav-text">
+                        <span class="material-symbols-outlined">&#xe88a;</span>
+                        <span class="nav-icon-text">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a aria-current="page" href="order.html" class="nav-text">
+                        <span class="material-symbols-outlined">&#xefef;</span>
+                        <span class="nav-icon-text">Order</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="location.html" class="nav-text">
+                        <span class="material-symbols-outlined">&#xf14d;</span>
+                        <span class="nav-icon-text">Location</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="rewards.html" class="nav-text">
+                        <span class="material-symbols-outlined">&#xe8b1;</span>
+                        <span class="nav-icon-text">Rewards</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="settings.html" class="nav-text">
+                        <span class="material-symbols-outlined">&#xe8b8;</span>
+                        <span class="nav-icon-text">Settings</span>
+                    </a>
+                </li>                
+            </ul>
+        </nav>
+        <!-- END BOTTOM APP BAR -->
+        
+    </header>
+
+    <main id="content-container-order">
+
+        <section id="content-head-order">
+            
+            <article class="body-text-container">
+                <h1 class="md-font-title-large">What can we make</h1>
+                <p class="md-font-title-medium">for you today?</p>
+            </article>
+        
+        </section>
+
+        <form action="#" method="post">
+
+            <section id="drink-type">
+
+                 <!-- CARD  -->
+                 <article class="md-card-elevated">
+
+                    <aside class="card-text-container">
+
+                        <fieldset class="md-list">
+
+                            <article class="body-text-container">
+                                <h1 class="md-font-title-large">Drink size</h1>
+                            </article>
+
+                            <dl id="drink-option-size" class="logout-list-item parent-category" aria-label="drink size options">
+                                <dd>
+                                    <span>Small - £2.75</span>
+                                    <span>
+                                        <input type="radio" id="drink-small" name="drink-option-size" value="drink-small" aria-label="Select small drink">
+                                    </span>
+                                </dd>
+                                <dd>
+                                    <span>Medium - £3.25</span>
+                                    <span>
+                                        <input type="radio" id="drink-medium" name="drink-option-size" value="drink-medium" aria-label="Select medium drink">
+                                    </span>
+                                </dd>
+                                <dd>
+                                    <span>Large - £3.75</span>
+                                    <span>
+                                        <input type="radio" id="drink-large" name="drink-option-size" value="drink-large" aria-label="Select large drink">
+                                    </span>
+                                </dd>
+                            </dl>
+
+                        </fieldset>
+
+                    </aside>
+                
+                </article>
+                <!-- END CARD -->
+
+                <!-- CARD  -->
+                <article class="md-card-elevated">
+        
+                    <aside class="card-text-container">
+
+                        <fieldset class="md-list">
+
+                            <article class="body-text-container">
+                                <h1 class="md-font-title-large">Drink type</h1>
+                                <p class="md-font-title-medium">Select to show options</p>
+                            </article>
+
+                            <dl id="drink-option-type" class="logout-list-item parent-category" aria-label="drink type options">
+                                <dd>
+                                    <span>Coffee</span>
+                                    <span id="options-trigger-coffee" class="material-symbols-outlined">&#xe7cd;</span>
+                                </dd>
+
+                                    <dl id="options-coffee" class="logout-list-item hide" aria-label="coffee options">
+                                        <dd>
+                                            <span>Latte</span>
+                                            <span>
+                                                <input type="radio" id="drink-latte" name="drink-type" value="latte" aria-label="Select drink type latte">
+                                            </span>
+                                        </dd>
+                                        <dd>
+                                            <span>Cappuccino</span>
+                                            <span>
+                                                <input type="radio" id="drink-cappuccino" name="drink-type" value="cappuccino" aria-label="Select drink type cappuccino">
+                                            </span>
+                                        </dd>
+                                        <dd>
+                                            <span>Americano</span>
+                                            <span>
+                                                <input type="radio" id="drink-americano" name="drink-type" value="americano" aria-label="Select drink type americano">
+                                            </span>
+                                        </dd>
+                                        <dd>
+                                            <span>Espresso</span>
+                                            <span>
+                                                <input type="radio" id="drink-espresso" name="drink-type" value="espresso" aria-label="Select drink type espresso">
+                                            </span>
+                                        </dd>
+                                        <dd>
+                                            <span>Flat White</span>
+                                            <span>
+                                                <input type="radio" id="drink-flat-white" name="drink-type" value="flat-white" aria-label="Select drink type flat white">
+                                            </span>
+                                        </dd>
+                                        <dd>
+                                            <span>Flat Black</span>
+                                            <span>
+                                                <input type="radio" id="drink-flat-black" name="drink-type" value="flat-black" aria-label="Select drink type flat black">
+                                            </span>
+                                        </dd>
+                                        <dd>
+                                            <span>Macchiato</span>
+                                            <span>
+                                                <input type="radio" id="drink-macchiato" name="drink-type" value="macchiato" aria-label="Select drink type macchiato">
+                                            </span>
+                                        </dd>
+                                        <dd>
+                                            <span>Mocha</span>
+                                            <span>
+                                                <input type="radio" id="drink-mocha" name="drink-type" value="mocha" aria-label="Select drink type mocha">
+                                            </span>
+                                        </dd>
+                                    </dl>
+
+                                <dd>
+                                    <span>Tea</span>
+                                    <span id="options-trigger-tea" class="material-symbols-outlined">&#xe7cd;</span>
+                                </dd>
+
+                                    <dl id="options-tea" class="logout-list-item hide" aria-label="tea options">
+                                        <dd>
+                                            <span>English Breakfast Tea</span>
+                                            <span>
+                                                <input type="radio" id="drink-breakfast-tea" name="drink-type" value="breakfast-tea" aria-label="Select drink breakfast tea">
+                                            </span>
+                                        </dd>
+                                        <dd>
+                                            <span>Decaf Tea</span>
+                                            <span>
+                                                <input type="radio" id="drink-mocha" name="drink-type" value="decaf-tea" aria-label="Select drink type decaf tea">
+                                            </span>
+                                        </dd>
+                                        <dd>
+                                            <span>Earl Grey Tea</span>
+                                            <span>
+                                                <input type="radio" id="drink-mocha" name="drink-type" value="earl-grey-tea" aria-label="Select drink type earl grey tea">
+                                            </span>
+                                        </dd>
+                                        <dd>
+                                            <span>Green Tea</span>
+                                            <span>
+                                                <input type="radio" id="drink-mocha" name="drink-type" value="green-tea" aria-label="Select drink type green tea">
+                                            </span>
+                                        </dd>
+                                    </dl>
+
+                                <dd>
+                                    <span>Hot chocolate & other</span>
+                                    <span id="options-trigger-choc" class="material-symbols-outlined">&#xe7cd;</span>
+                                </dd>
+
+                                    <dl id="options-choc" class="logout-list-item hide" aria-label="hot chocolate and other options">
+                                        <dd>
+                                            <span>Hot Chocolate</span>
+                                            <span>
+                                                <input type="radio" id="drink-hot-chocolate" name="drink-type" value="hot-chocolate" aria-label="Select drink type hot chocolate">
+                                            </span>
+                                        </dd>
+                                        <dd>
+                                            <span>White Hot Chocolate</span>
+                                            <span>
+                                                <input type="radio" id="drink-white-hot-chocolate" name="drink-type" value="white-hot-chocolate" aria-label="Select drink type white hot chocolate">
+                                            </span>
+                                        </dd>
+                                        <dd>
+                                            <span>Chai Latte</span>
+                                            <span>
+                                                <input type="radio" id="drink-chai-latte" name="drink-type" value="chai-latte" aria-label="Select drink type chai latte">
+                                            </span>
+                                        </dd>
+                                    </dl>
+
+                                <dd id="last-list-item">
+                                    <span>Iced coffee</span>
+                                    <span id="options-trigger-iced" class="material-symbols-outlined">&#xe7cd;</span>
+                                </dd>
+
+                                    <dl id="options-iced" class="logout-list-item hide" aria-label="iced tea options">
+                                        <dd>
+                                            <span>Iced Latte</span>
+                                            <span>
+                                                <input type="radio" id="drink-breakfast-tea" name="drink-type" value="breakfast-tea" aria-label="Select drink type breakfast tea">
+                                            </span>
+                                        </dd>
+                                        <dd>
+                                            <span>Iced Flat White</span>
+                                            <span>
+                                                <input type="radio" id="drink-decaf-tea" name="drink-type" value="decaf-tea" aria-label="Select drink type decaf tea">
+                                            </span>
+                                        </dd>
+                                        <dd>
+                                            <span>Iced Cappuccino</span>
+                                            <span>
+                                                <input type="radio" id="drink-earl-grey-tea" name="drink-type" value="earl-grey-tea" aria-label="Select drink type earl grey tea">
+                                            </span>
+                                        </dd>
+                                    </dl>
+
+                            </dl>
+
+                        </fieldset>
+
+                    </aside>
+                
+                </article>
+                <!-- END CARD -->
+            
+                <!-- CARD -->
+                <article class="md-card-elevated hide" id="options-milk">
+
+                    <aside class="card-text-container">
+
+                        <fieldset class="md-list">
+
+                            <article class="body-text-container">
+                                <h1 class="md-font-title-large">Milk options</h1>
+                            </article>
+
+                            <dl id="drink-option-milk" class="logout-list-item parent-category" aria-label="milk type options">
+                                <dd>
+                                    <span>Whole</span>
+                                    <span>
+                                        <input type="radio" id="options-milk-whole" name="drink-option-milk" value="milk-whole" aria-label="Select whole milk">
+                                    </span>
+                                </dd>
+                                <dd>
+                                    <span>Skimmed</span>
+                                    <span>
+                                        <input type="radio" id="options-milk-skimmed" name="drink-option-milk" value="milk-skimmed" aria-label="Select skimmed milk">
+                                    </span>
+                                </dd>
+                                <dd>
+                                    <span>Semi Skimmed</span>
+                                    <span>
+                                        <input type="radio" id="options-milk-semi" name="drink-option-milk" value="milk-semi" aria-label="Select semi-skimmed milk">
+                                    </span>
+                                </dd>
+                                <dd>
+                                    <span>Coconut</span>
+                                    <span>
+                                        <input type="radio" id="options-milk-coconut" name="drink-option-milk" value="milk-coconut" aria-label="Select coconut milk">
+                                    </span>
+                                </dd>
+                                <dd>
+                                    <span>Soya</span>
+                                    <span>
+                                        <input type="radio" id="options-milk-soya" name="drink-option-milk" value="milk-soya" aria-label="Select soya milk">
+                                    </span>
+                                </dd>
+                                <dd>
+                                    <span>Oat</span>
+                                    <span>
+                                        <input type="radio" id="options-milk-oat" name="drink-option-milk" value="milk-oat" aria-label="Select oat milk">
+                                    </span>
+                                </dd>
+                            </dl>
+                        </fieldset>
+
+                    </aside>
+                
+                </article>
+                <!-- END CARD -->
+
+                <!-- CARD -->
+                <article class="md-card-elevated">
+                        
+                    <aside class="card-text-container">
+                        <article class="body-text-container">
+                            <h1 class="md-font-title-large">Quantity</h1>
+                        </article>
+                        <fieldset class="text-input-field">
+                            <legend>Number to order</legend>
+                            <input class="md-text-outlined" type="number" id="number-of-drinks" name="number-of-drinks" maxlength="3" value="0" aria-label="Select number of drinks">
+                        </fieldset>
+
+                        <p>
+                            <input class="md-cp-button-common-filled" type="button" name="add-to-order" id="add-to-order" value="Add to order" aria-label="Add drink to order">
+                        </p>
+                    </aside>
+
+                </article>
+                <!-- END CARD -->
+
+                <!-- CARD -->
+                <article id="place-order-card" class="md-card-elevated">
+        
+                    <aside class="card-text-container">
+                        
+                        <article class="body-text-container" id="order-summary">
+                            <h1 class="md-font-title-large order-bar-title">Your order</h1>
+                            <p class="md-font-title-medium order-bar-subhead">Order details:</p>
+                            <p class="md-font-body-small order-bar-detail" id="order-details">No drinks selected</p>
+                            <p class="md-font-title-medium order-bar-subhead">Order cost:</p>
+                            <p class="md-font-body-small order-bar-detail" id="order-cost">£0.00</p>
+                        </article>
+                        
+                    </aside>
+
+                    <aside class="card-text-container">
+                        <p>
+                            <input class="md-cp-button-common-filled" type="button" name="place-order" id="place-order-button" value="Place order" aria-label="Place order button">
+                        </p>
+                    </aside>
+
+                </article>
+                <!-- END CARD -->
+
+            </section>
+
+        </form>
+        
+    </main>
+
+    <footer>
+        
+    </footer>
+
+    <script src="js/order.js"></script>
+
+    <script>
+        //check whether browser support service workers
+        if ('serviceWorker' in navigator) {
+            //wait until page loaded to avoid delaying rendering
+            window.addEventListener('load', function() {
+                //register service worker
+                navigator.serviceWorker.register('serviceworker.js').then(
+                    function(registration) {
+           console.log('Service worker registration successful',registration);
+                    }, 
+                    function(err) {
+                   console.log('Service worker registration failed', err);
+                });
+            });
+        }
+    </script>
+
+</body>
+
+</html>
